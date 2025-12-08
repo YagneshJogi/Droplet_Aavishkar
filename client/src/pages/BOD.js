@@ -65,6 +65,7 @@ const StatusBadge = styled.div`
   font-weight: 700;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   background: ${({ connected }) =>
     connected
@@ -76,6 +77,8 @@ const StatusBadge = styled.div`
       connected ? 'rgba(34,197,94,0.45)' : 'rgba(248,113,113,0.45)'};
   box-shadow: 0 10px 28px rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(8px);
+  white-space: nowrap;
+  line-height: 1;
 `;
 
 /* Sensor tiles */
@@ -276,7 +279,7 @@ function BOD() {
     const DO5num = Number(form.DO5);
 
     if (!VsNum || !VtNum || VsNum <= 0 || VtNum <= 0) {
-      alert('Enter valid Vs and Vt (mL).');
+      alert('Enter valid Vₛ and Vₜ (mL).');
       return;
     }
     if (Number.isNaN(DO1num) || Number.isNaN(DO5num)) {
@@ -303,7 +306,7 @@ function BOD() {
             </Subtitle>
           </div>
           <StatusBadge connected={connected}>
-            {connected ? 'Live from Firebase RTDB' : 'Waiting for RTDB data'}
+            {connected ? 'Live data' : 'Waiting for data'}
           </StatusBadge>
         </TitleRow>
 
@@ -342,8 +345,8 @@ function BOD() {
           <div>
             <Title>BOD₅ Lab Test Calculator</Title>
             <Subtitle>
-              Enter DO₁ (day 0) and DO₅ (day 5) with sample volume Vs and bottle volume Vt.
-              BOD₅ = (DO₁ − DO₅) × (Vt / Vs).
+              Enter DO₁ (day 0) and DO₅ (day 5) with sample volume Vₛ and bottle volume Vₜ.
+              BOD₅ = (DO₁ − DO₅) × (Vₜ / Vₛ).
             </Subtitle>
           </div>
         </TitleRow>
@@ -360,7 +363,7 @@ function BOD() {
           </Field>
 
           <Field>
-            <Label>Sample volume Vs (mL)</Label>
+            <Label>Sample volume Vₛ (mL)</Label>
             <Input
               type="number"
               step="0.1"
@@ -371,7 +374,7 @@ function BOD() {
           </Field>
 
           <Field>
-            <Label>Bottle volume Vt (mL)</Label>
+            <Label>Bottle volume Vₜ (mL)</Label>
             <Input
               type="number"
               step="0.1"

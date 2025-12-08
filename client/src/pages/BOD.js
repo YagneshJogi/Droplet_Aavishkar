@@ -259,7 +259,8 @@ function BOD() {
     const TEM = Number(temp) || 0;
     const DOv = Number(DO) || 0;
 
-    let bod = 0.002 * TDS + 0.3 * TURB + 0.1 * TEM - 0.5 * DOv;
+    let bod = (0.002 * TDS + 0.3 * TURB + 0.1 * TEM - 0.5 * DOv) / 10;
+
     if (bod < 0) bod = 0;
     if (bod > 40) bod = 40;
     return bod;

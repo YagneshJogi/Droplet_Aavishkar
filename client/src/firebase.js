@@ -3,13 +3,13 @@ import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAqzpMhxTOIVjFwCVcy7h7m1IILL-dDH4c",
-  authDomain: "aavishkar-8f0b9.firebaseapp.com",
-  databaseURL: "https://aavishkar-8f0b9-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "aavishkar-8f0b9",
-  storageBucket: "aavishkar-8f0b9.firebasestorage.app",
-  messagingSenderId: "651138895844",
-  appId: "1:651138895844:web:f4b1aadd08383619cfc1f1"
+  apiKey: "AIzaSyBg2arGPdT95nwXfxSFBApkNWORRyD1zms",
+  authDomain: "tddroplet-96223.firebaseapp.com",
+  databaseURL: "https://tddroplet-96223-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "tddroplet-96223",
+  storageBucket: "tddroplet-96223.firebasestorage.app",
+  messagingSenderId: "585223952269",
+  appId: "1:585223952269:web:b803f65654e3358cb30fc4"
 };
 
 // Initialize Firebase

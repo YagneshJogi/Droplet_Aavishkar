@@ -15,8 +15,8 @@ const char* ssid     = "yaggi";
 const char* password = "yaggi123";
 
 // ---------------- Firebase Credentials ----------------
-#define Web_API_KEY  "AIzaSyAqzpMhxTOIVjFwCVcy7h7m1IILL-dDH4c"
-#define DATABASE_URL "https://aavishkar-8f0b9-default-rtdb.asia-southeast1.firebasedatabase.app"
+#define Web_API_KEY  ""
+#define DATABASE_URL ""
 
 // REPLACE THESE
 #define USER_EMAIL   "esp32@gmail.com"
